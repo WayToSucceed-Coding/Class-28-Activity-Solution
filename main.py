@@ -42,12 +42,11 @@ class GameObject:
         self.fruit_type=fruit_type
         self.is_bomb=is_bomb
 
-    #Drawing the object on screen
     def draw(self):    
         if self.is_bomb:
-            screen.blit(fruit_images[self.fruit_type],(self.x,self.y))
-        else:
             screen.blit(bomb_image,(self.x,self.y))
+        else:
+            screen.blit(fruit_images[self.fruit_type],(self.x,self.y))
 
     def move(self):
         self.x +=self.speed_x
